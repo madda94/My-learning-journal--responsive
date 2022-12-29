@@ -1,0 +1,156 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+html,
+body,
+*  {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+}
+a:link,
+a:visited {
+    text-decoration: none;
+    color: #000;
+}
+/* [---MOBILE LAYOUT ---] */
+body {
+    display: grid;
+    grid-template-rows: minmax(60px, 80px) auto 100px;
+}
+
+/* header layout */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+#logo-header-div, 
+#menu-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+header img {
+    width: 14%;
+    height: 20px;
+    margin: .3em;
+}
+img {
+    width: 100%;
+}
+#blog-title {
+    font-size: 0.875rem;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: -0.03em;
+}
+#menu-div {
+    gap: 2em;
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* main article layout */
+#main-article {
+    margin: 2em 1.375em 3.2em;
+}
+#main-article .article-date {
+    font-size: 0.75rem;
+    margin-bottom: 1em;
+}
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+}
+#preview-p {
+    margin-bottom: 3em;
+}
+.body-main {
+    margin: .8em 0;;
+}
+#profile-img {
+    width: 50%;
+    margin: 1.6em 0;
+}
+
+/* recent posts layout */
+.recent-posts {
+    margin: 0 1.25em 3.5em;
+}
+.recent-posts-title {
+    text-align: center;
+    margin: .5em auto;
+}
+.article {
+    margin: 0 0 1.5em;
+}
+.recent-posts img {
+    width: 100%;
+    margin: 1em 0;
+    height: 80%;
+}
+.article-date {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+}
+.article-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: .5em 0;
+}
+.article-body {
+    line-height: 1.25;
+    font-weight: 400;
+}
+
+footer {
+    color: #fff;
+    background: #202020;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.2em;
+    margin-top: 1em;
+}
+
+/* [---DESKTOP LAYOUT ---] */
+@media (min-width: 600px) {
+    #main-article {
+        margin: 2em 6em 3.2em;
+        font-size: 1rem;
+    }
+    #main-header {
+        display: flex;  
+    }
+    #main-article .article-date {
+        margin-bottom: 1.5em;
+    }
+    h1 {
+        font-size: 2.25rem;
+        margin: 0;
+    }
+    #main-article img {
+        margin: -1em 1em 2em -3.5em;
+        width: 25%;
+    }
+    .body-main {
+        margin: 1em 0;
+    }
+    .recent-posts {
+        margin: 0 3em;
+        display: grid;
+        grid-template-columns:  repeat(3, 1fr);
+        gap: 1.625em;
+        align-items: center;
+    }
+    img {
+        object-fit: contain;
+    }
+}
